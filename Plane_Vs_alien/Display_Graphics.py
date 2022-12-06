@@ -28,7 +28,22 @@ pygame.draw.lines(window,(0,255,0),True,points,3)
 
 pygame.display.update()
 
+#3.画圆
+#circle(位置,颜色，圆心坐标，半径，线宽=0为 默认填充)
+pygame.draw.circle(window,(0,0,255),(200,250),100,2)
 
+#4.画矩形
+#rect(位置，颜色，矩形范围，线宽=0)
+pygame.draw.rect(window,(120,20,60),(100,70,200,100),3)
+
+#5.画椭圆
+#Ellipsis(位置，颜色， 圆形范围，线宽=0)
+pygame.draw.ellipse(window,(255,0,0),(30,70,100,200),1)
+
+#6.画弧线
+#arc(位置，颜色，矩形范围，起始弧度，终止的弧度，线宽=1)
+
+pygame.draw.arc(window,(0,0,0),(50,70,70,100),0,3.1415926,4)
 
 
 pygame.display.update()   
