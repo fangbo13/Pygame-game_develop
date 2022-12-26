@@ -9,7 +9,7 @@ def check_keydown_events(event,ship):
             elif event.key == pygame.K_UP:
                 ship.moving_up    = True
             elif event.key == pygame.K_DOWN:
-                ship.moving_up    = True
+                ship.moving_down  = True
 
 def check_keyup_events(event,ship):
             if event.key == pygame.K_RIGHT:
@@ -19,7 +19,7 @@ def check_keyup_events(event,ship):
             elif event.key == pygame.K_UP:
                 ship.moving_up    = False
             elif event.key == pygame.K_DOWN:
-                ship.moving_up    = False
+                ship.moving_down    = False
 
 def check_events(ship):
     for event in pygame.event.get():
@@ -32,8 +32,8 @@ def check_events(ship):
         elif event.type == pygame.KEYUP:
             check_keyup_events(event,ship)       
 
-def update_screen(ai_settings,screen,ship):
-    screen.fill(ai_settings.bg_color)
+def update_screen(t2setting1,screen,ship):
+    screen.fill(t2setting1.bg_color)
     ship.blitme()
 
     pygame.display.flip()

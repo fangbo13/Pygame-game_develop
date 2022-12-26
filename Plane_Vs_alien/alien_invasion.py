@@ -14,9 +14,6 @@ def run_game():
     pygame.display.set_caption("haibo")
 
     ship = Ship(ai_settings,screen)
-    
-    #设置背景颜色
-    bg_color = (230,230,230)
 
 
     # 开始游戏主循环
