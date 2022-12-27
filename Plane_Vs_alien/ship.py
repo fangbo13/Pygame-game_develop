@@ -26,6 +26,8 @@ class Ship():
         # 将飞船的属性 moving_right 和 moving_left 设置为布尔值，用于在 update() 方法中移动飞船
         self.moving_right = False
         self.moving_left = False
+        self.moving_up = False
+        self.moving_down = False
 
     # 更新飞船的位置
     def update(self):
@@ -37,6 +39,11 @@ class Ship():
         if self.moving_left and self.rect.left > 0:
             self.center -= self.ai_settings.ship_speed_factor
         
+        if self.moving_up and self.rect.top >0:
+            self.rect.bottom -= self.ai_settings.ship_speed_factor
+        if self.moving_down and self.rect.bottom < self.screen_rect.bottom:
+            self.rect.bottom += self.ai_settings.ship_speed_factor
+
         # 将矩形至于中心
 
         self.rect.centerx = self.center
