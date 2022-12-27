@@ -39,9 +39,9 @@ class Ship():
 
 
         if self.moving_up and self.rect.top >0:
-            self.bottom -= self.t2setting1.ship_speed_factor
+            self.rect.bottom -= self.t2setting1.ship_speed_factor
         if self.moving_down and self.rect.bottom < self.screen_rect.bottom:
-            self.bottom += self.t2setting1.ship_speed_factor
+            self.rect.bottom += self.t2setting1.ship_speed_factor
 
 
         self.rect.centerx = self.center

@@ -29,6 +29,7 @@ def check_events(ship):
         elif event.type == pygame.KEYDOWN:
             check_keydown_events(event,ship)
 
+            
         elif event.type == pygame.KEYUP:
             check_keyup_events(event,ship)       
 
